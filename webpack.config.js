@@ -1,12 +1,13 @@
-const path = require('path')
 const ESLintPlugin = require('eslint-webpack-plugin')
+const path = require('path')
+const webpack = require('webpack')
 
 module.exports = {
   entry: path.resolve(__dirname, './src/index.js'),
   module: {
     rules: [
       {
-        test: /\.(js)$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: ['babel-loader']
       },
@@ -17,16 +18,18 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['*', '.js']
+    extensions: ['*', '.js', '.jsx']
   },
   output: {
     path: path.resolve(__dirname, './build'),
     filename: 'bundle.js'
   },
   plugins: [
-    new ESLintPlugin()
+    new ESLintPlugin(),
+    new webpack.HotModuleReplacementPlugin()
   ],
   devServer: {
-    contentBase: path.resolve(__dirname, './build')
+    contentBase: path.resolve(__dirname, './build'),
+    hot: true
   }
 }
