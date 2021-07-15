@@ -1,9 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import './styles/main.scss'
+
 const App = ({ placeholder }) => {
   return (
-    <div>{placeholder}</div>
+    <div className='placeholder'>{placeholder}</div>
   )
 }
 
