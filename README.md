@@ -6,11 +6,11 @@ This repo uses separate branches to split project types (React, Vue, etc.) but a
 
 1. Clone this repository using the shell command,
    ```sh
-   git clone <repo>
+   git clone https://github.com/codemacabre/default-config.git
    ```
    Optionally, to clone a specific branch of this repository, use the command,
    ```sh
-   git clone -b <branch> <repo>
+   git clone -b <branch> https://github.com/codemacabre/default-config.git
    ```
 2. In the cloned directory, run the following command to install packages and dependencies,
    ```sh
