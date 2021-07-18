@@ -4,11 +4,20 @@ A set of default, but relatively minimal, configurations for my JavaScript proje
 ## Usage
 This repo uses separate branches to split project types (React, Vue, etc.) but all use the basic node setup on the main branch.
 
-1. `git clone` this repository
-2. `cd` into the cloned directory
-3. `npm i` to install packages and dependancies.
+1. Clone this repository using the shell command,
+   ```sh
+   git clone <repo>
+   ```
+   Optionally, to clone a specific branch of this repository, use the command,
+   ```sh
+   git clone -b <branch> <repo>
+   ```
+2. In the cloned directory, run the following command to install packages and dependencies,
+   ```sh
+   npm i
+   ```
 
-Check the package.json for `start`, `build` and other commands.
+Check the package.json for other commands, such as `start` and `build`.
 
 ## License
 All media content, style files, examples, and source code in this project are ethical open source software, offered under the Hippocratic License 2.1, a permissive license that enforces the licensee to comply with human rights principles and laws.
