@@ -1,15 +1,22 @@
 const ESLintPlugin = require('eslint-webpack-plugin')
 const path = require('path')
-const webpack = require('webpack')
 
 module.exports = {
   entry: path.resolve(__dirname, './src/index.js'),
+  mode: 'production',
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: ['babel-loader']
+        use: [{
+          loader: 'babel-loader',
+          options: {
+            plugins: [
+              ['react-remove-properties', { properties: ['data-test'] }]
+            ]
+          }
+        }]
       },
       {
         test: /\.(scss|css)$/,
@@ -25,11 +32,7 @@ module.exports = {
     filename: 'bundle.js'
   },
   plugins: [
-    new ESLintPlugin(),
-    new webpack.HotModuleReplacementPlugin()
+    new ESLintPlugin()
   ],
-  devServer: {
-    contentBase: path.resolve(__dirname, './build'),
-    hot: true
-  }
+  devtool: 'source-map'
 }
