@@ -10,7 +10,7 @@ This repo uses separate branches to split project types (React, Vue, etc.) but a
    ```
    Optionally, to clone a specific branch of this repository, use the command,
    ```sh
-   git clone -b <branch> https://github.com/codemacabre/default-config.git
+   git clone -b <branch> --single-branch https://github.com/codemacabre/default-config.git
    ```
 2. In the cloned directory, run the following command to install packages and dependencies,
    ```sh
