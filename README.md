@@ -1,4 +1,9 @@
 # CodeMacabre Default Config
+
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![Gitmoji](https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg)](https://gitmoji.dev/)
+[![License: Hippocratic 2.1](https://img.shields.io/badge/License-Hippocratic_2.1-lightgrey.svg)](https://firstdonoharm.dev)
+
 A set of default, but relatively minimal, configurations for my JavaScript projects. These are using my preferred toolset so are highly opinionated and entirely subject to change.
 
 ## Usage
