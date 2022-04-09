@@ -1,6 +1,5 @@
 const ESLintPlugin = require('eslint-webpack-plugin')
 const path = require('path')
-const webpack = require('webpack')
 
 module.exports = {
   entry: path.resolve(__dirname, './src/index.js'),
@@ -26,11 +25,10 @@ module.exports = {
     filename: 'bundle.js'
   },
   plugins: [
-    new ESLintPlugin(),
-    new webpack.HotModuleReplacementPlugin()
+    new ESLintPlugin()
   ],
   devServer: {
-    contentBase: path.resolve(__dirname, './build'),
+    static: path.resolve(__dirname, './build'),
     hot: true
   },
   devtool: 'eval-source-map'
