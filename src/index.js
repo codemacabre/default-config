@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 
 import App from './App'
 
-const placeholder = '👻'
+import placeholder from './assets/placeholder.png'
 
 ReactDOM.render(
   <App placeholder={placeholder} />,

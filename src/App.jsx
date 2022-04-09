@@ -5,7 +5,11 @@ import './styles/main.scss'
 
 const App = ({ placeholder }) => {
   return (
-    <div className='placeholder'>{placeholder}</div>
+    <>
+      <div className='placeholder'>
+        <img src={placeholder} />
+      </div>
+    </>
   )
 }
 
