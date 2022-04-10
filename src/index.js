@@ -6,7 +6,9 @@ import App from './App'
 import placeholder from './assets/placeholder.png'
 
 ReactDOM.render(
-  <App placeholder={placeholder} />,
+  <React.StrictMode>
+    <App placeholder={placeholder} />
+  </React.StrictMode>,
   document.getElementById('app')
 )
 
