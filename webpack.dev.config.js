@@ -1,23 +1,28 @@
-const path = require('path')
 const ESLintPlugin = require('eslint-webpack-plugin')
+const path = require('path')
 
 module.exports = {
   entry: path.resolve(__dirname, './src/index.js'),
+  mode: 'development',
   module: {
     rules: [
       {
-        test: /\.(js)$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: ['babel-loader']
       },
       {
         test: /\.(scss|css)$/,
         use: ['style-loader', 'css-loader', 'sass-loader']
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        type: 'asset/resource'
       }
     ]
   },
   resolve: {
-    extensions: ['*', '.js']
+    extensions: ['*', '.js', '.jsx']
   },
   output: {
     path: path.resolve(__dirname, './build'),
@@ -27,6 +32,8 @@ module.exports = {
     new ESLintPlugin()
   ],
   devServer: {
-    contentBase: path.resolve(__dirname, './build')
-  }
+    static: path.resolve(__dirname, './build'),
+    hot: true
+  },
+  devtool: 'eval-source-map'
 }
